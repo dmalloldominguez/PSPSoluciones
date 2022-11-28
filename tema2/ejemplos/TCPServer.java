@@ -20,10 +20,10 @@ public class TCPServer {
 
         System.out.println("Escuchando: " + serverSocket);
         try {
-            // Se bloquea hasta que recibe alguna petición de un cliente
+            // Se bloquea hasta que recibe alguna peticiÃ³n de un cliente
             // abriendo un socket para el cliente
             clientSocket = serverSocket.accept();
-            System.out.println("Connexión acceptada: "+ clientSocket);
+            System.out.println("ConnexiÃ³n acceptada: "+ clientSocket);
             // Establece canal de entrada
             input = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             // Establece canal de salida

@@ -10,7 +10,7 @@ public class TCPClient {
         PrintWriter output = null;
 
         // Creamos un socket en el lado cliente, enlazado con un
-        // servidor que est· en la misma m·quina que el cliente
+        // servidor que est√° en la misma m√°quina que el cliente
         // y que escucha en el puerto 4444
         try {
             clientSocket = new Socket("localhost", 4444);
@@ -19,7 +19,7 @@ public class TCPClient {
             // Obtenemos el canal de salida
             output = new PrintWriter(new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream())),true);
         } catch (IOException e) {
-            System.err.println("No puede establer canales de E/S para la conexiÛn");
+            System.err.println("No puede establer canales de E/S para la conexi√≥n");
             System.exit(-1);
         }
         BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
@@ -27,7 +27,7 @@ public class TCPClient {
         try {
             // La envia al servidor
             output.println("Hola!");
-            // EnvÌa a la salida est·ndar la respuesta del servidor
+            // Env√≠a a la salida est√°ndar la respuesta del servidor
             String response = input.readLine();
             System.out.println("Respuesta servidor: " + response);
 
