@@ -47,6 +47,13 @@ public class MQTTPublish {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+        try {
+            publisher.disconnect();
+            publisher.close();
+        } catch (MqttException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
