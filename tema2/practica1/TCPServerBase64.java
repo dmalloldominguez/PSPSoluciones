@@ -14,12 +14,12 @@ public class TCPServerBase64 {
         try {
             serverSocket = new ServerSocket(PORT);
         } catch (IOException e) {
-            System.out.println("No puede escuchar en el puerto: " + PORT);
+            System.out.println("No se puede conectar el socket: " + PORT);
             System.exit(-1);
         }
         Socket clientSocket;
         BufferedReader input;
-        System.out.println("Escuchando: " + serverSocket);
+        System.out.println("Escuchando por el puerto: " + serverSocket);
         while (true) {
             try {
                 clientSocket = serverSocket.accept();

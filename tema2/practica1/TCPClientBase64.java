@@ -19,11 +19,11 @@ public class TCPClientBase64 {
             input=new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             output=new PrintWriter(new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream())),true);
         } catch (IOException e) {
-            System.err.println("No puede establer canales de E/S para la conexión");
+            System.err.println("No se ha podido conectar al socket");
             System.exit(-1);
         }
 
-        System.out.println("Introduce un mensaje:");
+        System.out.println("Escribe un mensaje:");
         String message = scanner.nextLine();
         String messageBase64= String.format("#%s#", Base64.getEncoder().encodeToString(message.getBytes()));
         output.println(messageBase64);
